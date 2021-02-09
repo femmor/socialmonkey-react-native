@@ -3,11 +3,7 @@ import { Button, Text, View, StyleSheet } from 'react-native';
 const LoginScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Text>LoginScreen</Text>
-            <Button
-                title="Back to Onboarding"
-                onPress={() => navigation.navigate('Onboarding')}
-            />
+            <Text style={styles.title}>LoginScreen</Text>
         </View>
     )
 }
@@ -18,6 +14,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    title: {
+        fontSize: 20
+    }
 });
 
 export default LoginScreen
