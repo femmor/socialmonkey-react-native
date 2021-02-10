@@ -10,6 +10,7 @@ import LoginScreen from "../screens/LoginScreen";
 import SignUpScreen from "../screens/SignUpScreen";
 import { StackActions } from '@react-navigation/native';
 import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
+import { Text } from 'react-native';
 
 const Stack = createStackNavigator()
 
@@ -70,17 +71,21 @@ const AuthStack = () => {
             headerLeft: () => (
                 <View 
                     style={{
-                        marginLeft: 10
+                        marginLeft: 10,
+                        flexDirection: 'row',
+                        alignItems: 'center',
                     }}
                 >
                     <FontAwesome.Button
                         name="long-arrow-left"
                         size={25}
                         backgroundColor='#f9fafd'
-                        color="#333"
+                        color="#2e64e5"
                         onPress={() => navigation.navigate('Login')}
                     />
-
+                    <Text style={{
+                      marginLeft: -10
+                    }}>Login</Text>
                 </View>
             )
         })}
@@ -90,7 +95,7 @@ const AuthStack = () => {
         name="Signup"
         component={SignUpScreen}
         options={({navigation}) => ({
-            title: 'Sign Up',
+            title: '',
             headerStyle: {
                 backgroundColor: '#f9fafd',
                 shadowColor: '#f9fafd',
@@ -99,17 +104,21 @@ const AuthStack = () => {
             headerLeft: () => (
                 <View 
                     style={{
-                        marginLeft: 10
+                        marginLeft: 10,
+                        flexDirection: 'row',
+                        alignItems: 'center',
                     }}
                 >
                     <FontAwesome.Button
                         name="long-arrow-left"
                         size={25}
                         backgroundColor='#f9fafd'
-                        color="#333"
+                        color="#2e64e5"
                         onPress={() => navigation.navigate('Login')}
                     />
-
+                    <Text style={{
+                      marginLeft: -10
+                    }}>Login</Text>
                 </View>
             )
         })}

@@ -1,12 +1,19 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const ForgotPasswordScreen = () => {
     return (
-        <View>
+        <ScrollView contentContainerStyle={[styles.container]}>
             <Text>Forgot Password</Text>
-        </View>
+        </ScrollView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        
+    }
+})
 
 export default ForgotPasswordScreen
